@@ -1,7 +1,7 @@
 export default function Search (){
     return(
-        <div>
-            <h2>Placeholder for Search Bar</h2>
+        <div className='search-bar-standin'>
+            <h4>Placeholder for Search Bar</h4>
         </div>
     )
 }

@@ -4,7 +4,7 @@ export default function Header (){
     return(
         <div>
             <Nav/>
-            <h1>Tick-iT</h1>
+            <h1 className = "site-title">Tick-iT</h1>
             <Search/>
         </div>
     )

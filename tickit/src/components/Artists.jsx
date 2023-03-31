@@ -19,11 +19,15 @@ export default function Artists(){
 
     return(
         <div>
-            {artists.map((artist)=>(
-                <div>
-                    <h5>{artist.name}</h5>
-                </div>
-            ))}
+            <h2 className='page-title'>Artists:</h2>
+            <div className= 'card-container'>
+                {artists.map((artist)=>(
+                    <div className="mapped-card-display">
+                        <h5>{artist.name}</h5>
+                    </div>
+                ))}
+            </div>
+
         </div>
     )
 }
