@@ -8,9 +8,87 @@
     
     
  }
+
+
+/*homepage css start*/
+.hero-text{
+font-size: 60px;
+}
+.home{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+.hero-img{
+border-radius: 10px;
+
+}
+
+btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   height: 30px;
+   width: 90px;
+   color:white;
+   font-weight: 500;
+   border-radius: 100px;
+   padding: 10px 15px;
+   cursor: pointer;
+}
+btn:hover{
+background-color: rgb(83, 139, 0);
+}
+ .hero-container{
+   width: 60%;
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+   grid-gap: 10px;
+ }
+
+.upcoming-events-container{
+   background-color: white;
+   width: 181vh;
+   height:500px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;;
+}
+.upcoming-event-inner{
+display: flex;
+   flex-direction: row;
+}
+.upcoming-event-text{
+font-size: 40px;
+}
+.upcoming-events-btn{
+   width: 60px;
+   padding: 10px 60px;
+}
+
+.events-img{
+   width: 400px;
+   height: 300px;
+   border-radius: 10px;
+}
+.upcoming-events-list{
+   display: flex;
+   flex-direction: row;
+   overflow: auto;
+   grid-gap: 30px;
+}
+
+.event-date{
+}
+
+ /*homepage css end*/
  .App{
     font-family: Inter, sans-serif;
-    background-color:orangered;
+    background-color:#FF5631;
     min-height:100vh;
     max-height:100%;
   
