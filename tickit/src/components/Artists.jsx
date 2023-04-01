@@ -22,7 +22,7 @@ export default function Artists(){
             <h2 className='page-title'>ARTISTS:</h2>
             <div className= 'card-container'>
                 {artists.map((artist)=>(
-                    <div className="mapped-card-display">
+                    <div key={artist.id}className="mapped-card-display">
                         <h3>{artist.name}</h3>
                         <div className="img-wrapper">
                             <img src = {artist.image_url}/>

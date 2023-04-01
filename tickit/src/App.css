@@ -11,7 +11,8 @@
  .App{
     font-family: Inter, sans-serif;
     background-color:orangered;
-    height:100vh;
+    min-height:100vh;
+    max-height:100%;
   
 }
  h1, h2{
@@ -49,6 +50,9 @@
 main{
     padding:20px;
 }
+
+
+
  /***Components***/
  /****NAV BAR*****/
  .App-header{
