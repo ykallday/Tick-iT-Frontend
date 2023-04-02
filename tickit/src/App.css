@@ -156,6 +156,10 @@ ul li:nth-child(7){
 .hero-text{
 font-size: 60px;
 width: 800px;
+color: white;
+}
+h3{
+   color: white !important;
 }
 
 .hero-home{
@@ -237,7 +241,7 @@ background-color: rgb(83, 139, 0);
  }
 
 .upcoming-events-container{
-   background-color: white;
+   background-color: rgba(0, 0, 0, 0);
    position:relative;
    left: -12px;
    width: 170%;
@@ -259,8 +263,10 @@ font-size: 40px;
 .events-img{
    width: 310px;
    height: 248px;
+   border-radius: 10px;
 }
 .events-box{
+   border-radius: 10px;
    margin: 1px;
    display: flex;
    flex-direction: column;
@@ -297,6 +303,7 @@ font-size: 40px;
    width: 100%;
    transition: transform 0.3s ease-out;
    z-index: 2;
+   border-radius: 10px;
  
 }
 .events-box:hover .image{
@@ -321,6 +328,7 @@ font-size: 40px;
    flex-direction: column;;
    grid-gap: 9px;
    margin-bottom: -30px;
+   color: rgb(0, 0, 0);
  }
  .img-loco{
    font-size: 15px;
@@ -349,7 +357,7 @@ font-size: 40px;
  /*homepage css end*/
  .App{
     font-family: Inter, sans-serif;
-    background-color:#b83dffe1;
+    background-color:#000000;
     min-height:100vh;
     max-height:100%;
   

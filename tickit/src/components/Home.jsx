@@ -51,16 +51,16 @@ const template=(index)=>{
                                 <Link to = "/" className="a"data-text="&nbsp;Home">&nbsp;Home&nbsp;</Link>
                             </div>
                             <div>
-                                <Link to = "/" className="a"data-text="&nbsp;Venues">&nbsp;Venues&nbsp;</Link>
+                                <Link to = "/venues" className="a"data-text="&nbsp;Venues">&nbsp;Venues&nbsp;</Link>
                             </div>
                             <div>
-                                <Link to = "/" className="a"data-text="&nbsp;Events">&nbsp;Events&nbsp;</Link>
+                                <Link to = "/events" className="a"data-text="&nbsp;Events">&nbsp;Events&nbsp;</Link>
                             </div>
                             <div>
-                                <Link to = "/" className="a"data-text="&nbsp;Artists">&nbsp;Artists&nbsp;</Link>
+                                <Link to = "/artists" className="a"data-text="&nbsp;Artists">&nbsp;Artists&nbsp;</Link>
                             </div>
                             <div>
-                                <Link to = "/" className="a"data-text="&nbsp;Profile">&nbsp;Profile&nbsp;</Link>
+                                <Link to = "/profile" className="a"data-text="&nbsp;Profile">&nbsp;Profile&nbsp;</Link>
                             </div>
                         </div>
 
