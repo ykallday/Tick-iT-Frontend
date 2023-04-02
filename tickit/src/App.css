@@ -453,6 +453,7 @@ main{
     grid-template-columns: repeat(4,1fr);
     padding:20px;
     overflow:scroll;
+    
 }
 
 .img-wrapper{
@@ -488,6 +489,3 @@ main{
     text-decoration-color: white;
  }
 
-.navside{
-   background-color:black;
-}
