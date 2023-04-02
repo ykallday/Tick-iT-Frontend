@@ -11,10 +11,6 @@ export default function Nav(){
                 <Link to = "/artists"><button>Artists</button></Link>
                 <Link to = "/profile"><button>Profile</button></Link>
             </div>
-            <div className = 'accounts-nav'>
-                <Link to = "/register"><button>Register</button></Link>
-                <Link to = "/login"><button>Login</button></Link>
-            </div>
 
         </div>
     )

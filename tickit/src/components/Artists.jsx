@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios'
-
+import Nav from './Nav'
 
 
 
@@ -19,7 +19,7 @@ export default function Artists(){
 
     return(
         <div>
-            <h2 className='page-title'>ARTISTS:</h2>
+        <Nav/>
             <div className= 'card-container'>
                 {artists.map((artist)=>(
                     <div key={artist.id}className="mapped-card-display">
@@ -33,5 +33,6 @@ export default function Artists(){
             </div>
 
         </div>
+    
     )
 }
