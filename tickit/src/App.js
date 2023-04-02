@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <AppContext.Provider value = {{search, setSearch}}> 
       <header className="App-header">
-        <Header/>
+        {/* <Header/> */}
       </header>
       <main>
         <Main/>
