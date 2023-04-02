@@ -28,10 +28,9 @@ export default function Search (){
 
     return(
         <div className = 'search-bar'>
-            <CgSearch/>
             <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor = "SearchField"></label>
-                <input type="text" placeholder="🔍" id= "query" value = {search.formContent} onChange={handleChange}></input>
+                <input type="text" placeholder={CgSearch} id= "query" value = {search.formContent} onChange={handleChange}></input>
                 <label htmlFor="category"></label>
                 <select id="category" name="category" onChange={handleChange} required>
                     <option id="category" value="">Search by:</option>

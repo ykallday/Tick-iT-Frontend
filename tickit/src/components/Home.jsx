@@ -64,11 +64,7 @@ const template=(index)=>{
                             </div>
                         </div>
 
-                        <div className = 'accounts-nav'>
-                            <Link to = "/register"><button>Register</button></Link>
-                            <Link to = "/login"><button>Login</button></Link>
-                        </div>
-
+                        <Search/>
                     </div>
                 </div>
 
@@ -104,7 +100,7 @@ const template=(index)=>{
                     <div className="upcoming-events-list">
                     {multi()}
                     </div>
-                
+             
                 </div> 
            </div>
         </div>

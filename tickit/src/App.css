@@ -31,6 +31,7 @@
 	align-items: center;
 	height: 100vh;
 	background: #252839;
+   color:white;
 }
 .ul{
 	position: relative;
@@ -426,15 +427,25 @@ main{
     padding-left:20px;
  }
  /***SEARCH BAR***/
- .search-bar-standin{
-    padding-left:20px;
+ .search-bar input{
     background-color:black;
-    width:30%;
-    height:30px;
+    border: 1px solid white;
+    /* width:30%;
+    height:30px; */
     border-radius:20px;
-    margin-left:15px;
+    margin-left:5px;
     margin-top:5px;
     color:white;
+    padding:5px;
+ }
+
+ .search-bar select{
+   background-color:black;
+   border: 2px solid white;
+   color:white;
+   border-radius:20px;
+   margin-left:5px;
+   padding:2px;
  }
 /****Cards****/
 .card-container{
@@ -442,6 +453,7 @@ main{
     grid-template-columns: repeat(4,1fr);
     padding:20px;
     overflow:scroll;
+    
 }
 
 .img-wrapper{
