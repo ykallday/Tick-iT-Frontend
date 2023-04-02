@@ -8,9 +8,356 @@
     
     
  }
+
+
+
+
+ /**/
+ html, body {
+   max-width: 100%;
+   overflow-x: hidden;
+   padding-left: 6rem;
+}
+
+ *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Mochiy Pop One', sans-serif;
+}
+.body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #252839;
+}
+.ul{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.a{
+	font-size: 2em;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1em;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+.a::before{
+	content: attr(data-text);
+	position: absolute;
+	color: var(  --card-clr-red);
+	width: 0;
+	overflow: hidden;
+	transition: 1.2s;
+	border-right: 8px solid var(  --card-clr-red);
+	-webkit-text-stroke: 1px var(--clr);
+}
+
+:root{
+   --clr-card1: #00ade1;
+   --card-clr-red: #31ffea;
+   --card-clr-violet: #ffdd1c;
+   --card-clr-green: #00dc82;
+   --text-clr: #dc00d4;
+}
+
+a:hover::before{
+	width: 100%;
+	filter: drop-shadow(0 0 25px rgb(100, 255, 255))
+}
+ /**/
+/*homepage css start*/
+
+
+ul{
+   position: relative;
+   left: 30px;
+   top:10px;
+   transform: translate(-50%, -50%);
+   margin:0;
+   padding:0;
+   display: flex;
+}
+
+ul li{
+   list-style: none;
+   font-family: Arial;
+   font-size:20px;
+   text-shadow: none;
+   animation:animate 1s infinite linear;
+}
+
+@keyframes animate{
+   0%{
+      color:#484848;
+      text-shadow:none;
+   }
+   18%{
+      color:#484848;
+      text-shadow:none;
+   }
+   20%{
+      color:#fff900;
+      text-shadow: 0 0 7px #fff900, 0 0 20px #ff6c00;
+   }
+   30%{
+      color: #484848;
+      text-shadow: none;
+   }
+   35%{
+      color:#fff900;
+      text-shadow: 0 0 7px #fff900, 0 0 20px #ff6c00;
+   }
+   70%{
+      color:#484848;
+      text-shadow: none;
+   }
+   85%{
+      color:#fff900;
+      text-shadow: 0 0 7px #fff900, 0 0 20px #ff6c00;
+   }
+   90%{
+      color:#484848;
+      text-shadow: none;
+   }
+   100%{
+      color:#484848;
+      text-shadow: none;
+   }
+}
+.ull li:nth-child(1){
+   animation-delay:.2s;
+}
+ul li:nth-child(2){
+animation-delay: 0.4s;
+}
+ul li:nth-child(3){
+   animation-delay: .6s;
+}
+ul li:nth-child(4){
+   animation-delay: .8s;
+}
+ul li:nth-child(5){
+   animation-delay: 1s;
+}
+ul li:nth-child(6){
+   animation-delay:1.2s;
+}
+ul li:nth-child(7){
+   animation-delay:1.4s;
+} 
+
+.hero-text{
+font-size: 60px;
+width: 800px;
+color: white;
+}
+h3{
+   color: white !important;
+}
+
+.hero-home{
+   left: 500px;
+   position: absolute;
+   left: 400px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+.hero-nav{
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 1000px;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    color:white;
+}
+.hero-nav-links{
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+}
+.hero-links{
+   display: flex;
+   align-items: center;
+   border-top: 2px  solid #464747;
+   width:200px;
+   height: 40px;
+   color:white;
+}
+.hero-links-end{
+   display: flex;
+   align-items: center;
+   border-top: 2px  solid #464747;
+   width:200px;
+   height: 40px;
+   color:white;
+   border-bottom: 2px solid #464747;
+}
+.inner-link{   
+   text-decoration:none;
+   color: white
+}
+
+
+.home{
+   display: flex;
+}
+.hero-img{
+border-radius: 10px;
+
+}
+
+btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   height: 30px;
+   width: 90px;
+   color:white;
+   font-weight: 500;
+   border-radius: 100px;
+   padding: 10px 15px;
+   cursor: pointer;
+}
+btn:hover{
+background-color: rgb(83, 139, 0);
+}
+ .hero-container{
+   width: 60%;
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+   grid-gap: 10px;
+
+ }
+
+.upcoming-events-container{
+   background-color: rgba(0, 0, 0, 0);
+   position:relative;
+   left: -12px;
+   width: 170%;
+   height:800px;
+   display: flex;
+   align-items: start;
+   justify-content: start;
+   flex-direction: column;;
+}
+
+.upcoming-event-text{
+font-size: 40px;
+}
+.upcoming-events-btn{
+   width: 60px;
+   padding: 10px 60px;
+}
+
+.events-img{
+   width: 310px;
+   height: 248px;
+   border-radius: 10px;
+}
+.events-box{
+   border-radius: 10px;
+   margin: 1px;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   transition: .8s;
+   /* background: url('https://media.gettyimages.com/id/978980792/photo/alex-turner-of-arctic-monkeys-performs-at-coca-cola-roxy-on-june-19-2018-in-atlanta-georgia.jpg?s=612x612&w=0&k=20&c=XepG2gHNuLqlzeezkocFiYC7x_DR1TWKoGnpG0dojLw=') center center no-repeat;
+   background-size: 350px; */
+
+
+}
+
+/* .events-box:hover{
+   background: url('https://media.gettyimages.com/id/978980792/photo/alex-turner-of-arctic-monkeys-performs-at-coca-cola-roxy-on-june-19-2018-in-atlanta-georgia.jpg?s=612x612&w=0&k=20&c=XepG2gHNuLqlzeezkocFiYC7x_DR1TWKoGnpG0dojLw=') center center no-repeat;
+   background-size: 400px;
+
+   filter:blur(.5px);
+   filter: brightness(80%);
+
+
+} */
+
+.upcoming-events-list{
+   position:absolute;
+   left: 0px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+
+.image{
+   height: 100%;
+   width: 100%;
+   transition: transform 0.3s ease-out;
+   z-index: 2;
+   border-radius: 10px;
+ 
+}
+.events-box:hover .image{
+   transform: translateY(-100px);
+ }
+ .image > img {
+
+   transition: opacity 0.3s ease-out;
+ }
+ .events-box:hover > .image > img{
+   opacity: 0.5;
+ }
+ 
+ .event-date{
+  background-color: #FFF;
+  position: relative;
+  top: -50px;
+  text-align: center
+ }
+ .img-details{
+   display: flex;
+   flex-direction: column;;
+   grid-gap: 9px;
+   margin-bottom: -30px;
+   color: rgb(0, 0, 0);
+ }
+ .img-loco{
+   font-size: 15px;
+   font-weight: 400;
+ }
+ .img-title{
+   font-size: 30px;
+   font-weight: 700;
+ }
+.event-date:hover{
+   transform: translateY(-100);
+   box-shadow:
+   inset 0 0 60px whitesmoke,
+   inset 20px 0 80px #f0f,
+   inset -20px 0 80px #0ff,
+   inset 20px 0 300px #f0f,
+   inset -20px 0 300px #0ff,
+   0 0 50px #fff,
+   -10px 0 80px #f0f,
+   10px 0 80px #0ff; 
+ 
+}
+.block2{
+   height: 100%;
+}
+ /*homepage css end*/
  .App{
     font-family: Inter, sans-serif;
-    background-color:orangered;
+    background-color:#000000;
     min-height:100vh;
     max-height:100%;
   

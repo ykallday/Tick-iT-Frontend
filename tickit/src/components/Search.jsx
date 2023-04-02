@@ -1,7 +1,7 @@
 import {useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
-
+import {CgSearch} from 'react-icons/cg'
 export default function Search (){
     const {search, setSearch} = useContext(AppContext);
 
@@ -28,6 +28,7 @@ export default function Search (){
 
     return(
         <div className = 'search-bar'>
+            <CgSearch/>
             <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor = "SearchField"></label>
                 <input type="text" placeholder="🔍" id= "query" value = {search.formContent} onChange={handleChange}></input>
