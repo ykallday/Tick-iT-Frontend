@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import Nav from './Nav';
 export default function ArtistDetail(){
     let { id } = useParams();
     const [artist, setArtist] = useState([])
@@ -13,6 +14,7 @@ export default function ArtistDetail(){
     },[]);
     return(
         <div>
+            <Nav/>
             <div>
 
             

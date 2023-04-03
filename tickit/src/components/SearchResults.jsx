@@ -2,6 +2,7 @@ import {useState, useEffect, useContext} from 'react'
 import { AppContext } from '../Context/AppContext'
 import axios from 'axios'
 import {Link, useNavigate} from 'react-router-dom'
+import Nav from './Nav'
 
 export default function SearchResults(){
     const { search, setSearch } = useContext(AppContext)
@@ -35,7 +36,8 @@ export default function SearchResults(){
     }, [input])
 
     return(
-        
+        <div>
+            <Nav/>
         <div className= 'card-container'>
             
         {list.map((item)=>(
@@ -47,6 +49,7 @@ export default function SearchResults(){
                 </div>
             </div>
         ))}
+    </div>
     </div>
     )
 }
