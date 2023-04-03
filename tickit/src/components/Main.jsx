@@ -18,18 +18,19 @@ export default function Main(){
             <Routes>
                 <Route path= "/" element= {<Home/>}/>
                 <Route path= "/venues" element= {<Venues/>}/>
-                <Route path= "/venues/searchresults/:search" element= {<SearchResults/>}/>
                 <Route path= "/venues/:id" element= {<VenueDetail/>}/>
                 <Route path = "/artists" element = {<Artists/>}/>
-                <Route path= "/artists/searchresults/:search" element= {<SearchResults/>}/>
                 <Route path = "/artists/:id" element = {<ArtistDetail/>}/>
                 <Route path= "/events" element= {<Events/>}/>
-                <Route path= "/events/searchresults/:search" element= {<SearchResults/>}/>
                 <Route path = "/events/:id" element = {<EventDetail/>}/>
                 <Route path = "/profile" element = {<UserProfile/>}/>
                 <Route path = "/login" element = {<Login/>}/>
                 <Route path = "/register" element = {<Register/>}/>
                 <Route path = "/tickets/:id" element = {<Tickets/>}/>
+                <Route path= "/searchresults/" element= {<SearchResults/>}/>
+                <Route path= "/searchresults/artistsDetail/:id" element= {<ArtistDetail/>}/>
+                <Route path= "/searchresults/venuesDetail/:id" element= {<VenueDetail/>}/>
+                <Route path= "/searchresults/eventsDetail/:id" element= {<EventDetail/>}/>
             </Routes>
         </div>
     )

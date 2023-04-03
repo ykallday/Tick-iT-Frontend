@@ -16,16 +16,10 @@ export default function Search ({setResults}){
     const handleSubmit = (event)=>{
     
         event.preventDefault();
-        if (search.category==="artists"){
-            navigate(`artists/SearchResults/${search.query}`);
-        }else if (search.category === "events"){
-            navigate(`events/SearchResults/${search.query}`);
-        }else if (search.category === "venues"){
-            navigate(`venues/SearchResults/${search.query}`);
-        }else{
-            console.log('error')
+        navigate("/SearchResults");
+
         }
-    }
+    
 
     const[input,setInput] = useState('')
 
