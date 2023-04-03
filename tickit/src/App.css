@@ -523,3 +523,14 @@ main{
 #artist-detail{
    color:white;
 }
+
+
+ #venue-info h1 {
+   display: block;
+ }
+ 
+ #venue-info h4 {
+   display: inline-block;
+   margin-right: 10px;
+ }
+
