@@ -20,9 +20,9 @@ export default function Nav(){
                     <div>
                         <Link to = "/artists" className="a"data-text="&nbsp;Artists">&nbsp;Artists&nbsp;</Link>
                     </div>
-                    <div>
+                    {/* <div>
                         <Link to = "/profile" className="a"data-text="&nbsp;Profile">&nbsp;Profile&nbsp;</Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 <Search/>
