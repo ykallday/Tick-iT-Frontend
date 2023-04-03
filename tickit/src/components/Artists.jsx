@@ -23,6 +23,7 @@ export default function Artists(){
 
     return(
         <div>
+            <Nav/>
             <div className= 'card-container'>
                 {artists.map((artist)=>(
                     <div onClick={() => showDetail(artist.id)} key={artist.id}className="mapped-card-display">

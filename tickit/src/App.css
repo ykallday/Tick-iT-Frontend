@@ -159,8 +159,9 @@ font-size: 60px;
 width: 800px;
 color: white;
 }
+
 h3{
-   color: white !important;
+   color: black;
 }
 
 .hero-home{
@@ -174,11 +175,14 @@ h3{
 .hero-nav{
     background-color: rgb(0, 0, 0);
     width: 200px;
-    height: 1000px;
+    height: 100vh;
     position: fixed;
     top: 0px;
     left:0px;
     color:white;
+    padding-top:30px;
+    padding-left:5px;
+    padding-right:5px;
 }
 .hero-nav-links{
    margin-top: 20px;
@@ -452,7 +456,8 @@ main{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     padding:20px;
-    overflow:scroll;
+    /* overflow:scroll; */
+
     
 }
 
@@ -482,6 +487,10 @@ main{
  .mapped-card-display:hover{
     scale: calc(1.1);
  }
+
+ .mapped-card-display h2{
+   color:black;
+ }
  /**pages**/
  .page-title{
     text-align:center;
@@ -489,3 +498,24 @@ main{
     text-decoration-color: white;
  }
 
+#event-detail{
+   color:white;
+}
+
+.img-details{
+   margin-top:20px;
+   width: 25%;
+   border-radius: 20px;
+
+   margin-bottom:20px;
+}
+#event-detail h3{
+   color:white;
+}
+#event-detail button{
+   background-color:white;
+   color:black;
+}
+#tickets{
+   color:white;
+}

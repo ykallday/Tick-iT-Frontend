@@ -10,6 +10,7 @@ import UserProfile from './UserProfile'
 import Login from './Login'
 import Register from './Register'
 import SearchResults from './SearchResults'
+import Tickets from './Tickets'
 
 export default function Main(){
     return(
@@ -28,6 +29,7 @@ export default function Main(){
                 <Route path = "/profile" element = {<UserProfile/>}/>
                 <Route path = "/login" element = {<Login/>}/>
                 <Route path = "/register" element = {<Register/>}/>
+                <Route path = "/tickets/:id" element = {<Tickets/>}/>
             </Routes>
         </div>
     )

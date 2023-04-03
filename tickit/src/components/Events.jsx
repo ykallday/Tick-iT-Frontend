@@ -22,6 +22,7 @@ export default function Events(){
 
     return(
         <div>
+            <Nav/>
             <div className= 'card-container'>
                 {events.map((event)=>(
                     <div onClick={() => showDetail(event.id)} key={event.id}className="mapped-card-display">
