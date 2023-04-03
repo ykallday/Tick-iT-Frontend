@@ -1,4 +1,5 @@
-import {useContext} from 'react'
+import axios from 'axios'
+import {useContext, useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import {CgSearch} from 'react-icons/cg'
@@ -26,11 +27,40 @@ export default function Search (){
         }
     }
 
+    const[input,setInput] = useState('')
+
+        const[data,setData] =useState([])
+
+        useEffect(()=>{
+            const getAllEvents = async () => {
+                const res = await axios.get('http://localhost:8000/events/?format=json');
+                // data(res.data)
+                const filterRes = res.data.filter((artist)=>{
+                    return artist && artist.name && artist.name.toLowerCase().includes(input)
+                    
+                })
+                const r = res.data[0]
+                console.log(res.data)
+                console.log(filterRes)
+            };
+            getAllEvents()
+
+        },[input])
+    
+
+
+    function hanChange(value){
+        setInput(value)
+        console.log(value)
+
+    
+    }
     return(
+
         <div className = 'search-bar'>
             <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor = "SearchField"></label>
-                <input type="text" placeholder={CgSearch} id= "query" value = {search.formContent} onChange={handleChange}></input>
+                <input type="text" placeholder={CgSearch} id= "query" value = {input} onChange={(e)=> hanChange(e.target.value)}></input>
                 <label htmlFor="category"></label>
                 <select id="category" name="category" onChange={handleChange} required>
                     <option id="category" value="">Search by:</option>
