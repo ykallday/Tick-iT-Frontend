@@ -9,8 +9,9 @@ export default function SearchResults(){
     const navigate = useNavigate()
 
     const [list, setList] = useState([])
-    // const [filtered, setFiltered] = useState([])
+    let filtered = []
     let input = search.query;
+    console.log(input)
     let category = search.category;
 
     const showDetail = (index) =>(
@@ -21,28 +22,23 @@ export default function SearchResults(){
         const getResults = async() => {
             const response = await axios.get(`http://localhost:8000/${category}/`)
             setList(response.data); 
-            // list.map((item=>{
-            //     if (item.name.includes(input)){
-            //         console.log(item.name)
-            //         setFiltered(...filtered)
-            //     }
-            //     console.log(item.name)
-            //     console.log(input)
-            // }))
-                
-            
         }
         getResults();
-    }, [input])
+    }, [input, category])
 
+    if (list){
+        list.map((item=>{
+        if (item.name.toLowerCase().includes(input)){
+           filtered.push(item)
+        }}))}
+    
     return(
         <div>
-            <Nav/>
+        <Nav/>
         <div className= 'card-container'>
+        {filtered.map((item)=>(
             
-        {list.map((item)=>(
-            
-            <div key={item.id} className="mapped-card-display">
+            <div key={item.id} className="mapped-card-display" onClick={() => showDetail(item.id)} >
                 <h3>{item.name}</h3>
                 <div className="img-wrapper">
                     <img src = {item.image_url}/>
