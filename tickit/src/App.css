@@ -495,3 +495,11 @@ main{
     text-decoration-color: white;
  }
 
+#event-detail{
+   color:white;
+}
+
+.img-details{
+   width: 75%;
+   border-radius: 20px;
+}
