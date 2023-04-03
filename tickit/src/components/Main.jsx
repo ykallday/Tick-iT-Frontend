@@ -11,6 +11,7 @@ import Login from './Login'
 import Register from './Register'
 import SearchResults from './SearchResults'
 import Tickets from './Tickets'
+import Confirmation from './Confirmation'
 
 export default function Main(){
     return(
@@ -27,6 +28,7 @@ export default function Main(){
                 <Route path = "/login" element = {<Login/>}/>
                 <Route path = "/register" element = {<Register/>}/>
                 <Route path = "/tickets/:id" element = {<Tickets/>}/>
+                <Route path = "/confirmation/" element = {<Confirmation/>}/>
                 <Route path= "/searchresults/" element= {<SearchResults/>}/>
                 <Route path= "/searchresults/artistsDetail/:id" element= {<ArtistDetail/>}/>
                 <Route path= "/searchresults/venuesDetail/:id" element= {<VenueDetail/>}/>
