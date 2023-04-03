@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import {Link} from 'react-router-dom'
 import Search from './Search'
+import SearchResultsList from './SearchResultsList'
 
 
 export default function Nav(){
+
+
+    const[results, setResults] =useState([])
+
     return(
         <div className="block1">
         <div className="hero-nav">
@@ -25,7 +31,8 @@ export default function Nav(){
                     </div> */}
                 </div>
 
-                <Search/>
+                <Search setResults={setResults}/>
+                <SearchResultsList results={results}/>
             </div>
         </div>
 

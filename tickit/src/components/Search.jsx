@@ -3,7 +3,7 @@ import {useContext, useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import {CgSearch} from 'react-icons/cg'
-export default function Search (){
+export default function Search ({setResults}){
     const {search, setSearch} = useContext(AppContext);
 
     const navigate = useNavigate();
@@ -29,27 +29,28 @@ export default function Search (){
 
     const[input,setInput] = useState('')
 
-        const[data,setData] =useState([])
 
-        useEffect(()=>{
+
+        function din(value){
             const getAllEvents = async () => {
                 const res = await axios.get('http://localhost:8000/events/?format=json');
                 // data(res.data)
                 const filterRes = res.data.filter((artist)=>{
-                    return artist && artist.name && artist.name.toLowerCase().includes(input)
+                    return value&&  artist && artist.name && artist.name.toLowerCase().includes(input)
                     
                 })
                 const r = res.data[0]
-                console.log(res.data)
-                console.log(filterRes)
+                setResults(filterRes)
             };
             getAllEvents()
-
-        },[input])
+    
+        }
+        
     
 
 
     function hanChange(value){
+        din(value)
         setInput(value)
         console.log(value)
 
