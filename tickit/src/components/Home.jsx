@@ -1,4 +1,5 @@
-import Search from "./Search"
+
+import Nav from "./Nav"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
@@ -43,32 +44,7 @@ const template=(index)=>{
     return(
 
         <div className="home">
-            <div className="block1">
-                <div className="hero-nav">
-                    <div className = "hero-nav-links">
-                        <div className="ul">
-                            <div>
-                                <Link to = "/" className="a"data-text="&nbsp;Home">&nbsp;Home&nbsp;</Link>
-                            </div>
-                            <div>
-                                <Link to = "/venues" className="a"data-text="&nbsp;Venues">&nbsp;Venues&nbsp;</Link>
-                            </div>
-                            <div>
-                                <Link to = "/events" className="a"data-text="&nbsp;Events">&nbsp;Events&nbsp;</Link>
-                            </div>
-                            <div>
-                                <Link to = "/artists" className="a"data-text="&nbsp;Artists">&nbsp;Artists&nbsp;</Link>
-                            </div>
-                            <div>
-                                <Link to = "/profile" className="a"data-text="&nbsp;Profile">&nbsp;Profile&nbsp;</Link>
-                            </div>
-                        </div>
-
-                        <Search/>
-                    </div>
-                </div>
-
-            </div>
+            <Nav/>
 
             <div className="block2">
 
@@ -76,7 +52,7 @@ const template=(index)=>{
 
                     <h2 className="hero-text">
                         Chicago's Best Concert Ticket website. </h2>
-                    <h3>Buy your tickets to local shows FROM locals, and forget those fees.</h3>
+                    <h4>Buy your tickets to local shows FROM locals, and forget those fees.</h4>
                     <btn> 
                         <span>
                             <ul>
@@ -98,7 +74,7 @@ const template=(index)=>{
                         <btn className="upcoming-events-btn">See All</btn> */}
                     </div>
                     <div className="upcoming-events-list">
-                    {multi()}
+                    {/* {multi()} */}
                     </div>
              
                 </div> 

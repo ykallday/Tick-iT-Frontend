@@ -21,6 +21,7 @@ export default function Venues(){
 
     return(
         <div>
+            <Nav/>
             <div className= 'card-container'>
                 {venues.map((venue)=>(
                     <div onClick={() => showDetail(venue.id)} key={venue.id}className="mapped-card-display">

@@ -1,6 +1,8 @@
 import {useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import Nav from './Nav';
+
 export default function EventDetail(){
     let { id } = useParams();
     const [event, setEvent] = useState([])
@@ -13,6 +15,7 @@ export default function EventDetail(){
     },[]);
     return(
         <div>
+            <Nav/>
             <div id = "event-detail">
                 <h2>{event.name}</h2>
             </div>

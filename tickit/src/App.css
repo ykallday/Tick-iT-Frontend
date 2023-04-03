@@ -159,8 +159,9 @@ font-size: 60px;
 width: 800px;
 color: white;
 }
+
 h3{
-   color: white !important;
+   color: black;
 }
 
 .hero-home{
@@ -452,7 +453,8 @@ main{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     padding:20px;
-    overflow:scroll;
+    /* overflow:scroll; */
+
     
 }
 
@@ -481,6 +483,10 @@ main{
 
  .mapped-card-display:hover{
     scale: calc(1.1);
+ }
+
+ .mapped-card-display h2{
+   color:black;
  }
  /**pages**/
  .page-title{
