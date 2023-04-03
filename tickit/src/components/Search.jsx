@@ -36,7 +36,7 @@ export default function Search ({setResults}){
                 const res = await axios.get('http://localhost:8000/events/?format=json');
                 // data(res.data)
                 const filterRes = res.data.filter((artist)=>{
-                    return value&&  artist && artist.name && artist.name.toLowerCase().includes(input)
+                    return value &&  artist && artist.name && artist.name.toLowerCase().includes(input)
                     
                 })
                 const r = res.data[0]
@@ -69,8 +69,7 @@ export default function Search ({setResults}){
                     <option id="category" value="events">Event</option>
                     <option id="category" value="venues">Venue</option>
                 </select>
-
-            <input type = "submit" id="submit" value="Search"></input>
+            <input type = "submit" id="submit" value="Search"></input> 
         </form>
         </div>
     )
