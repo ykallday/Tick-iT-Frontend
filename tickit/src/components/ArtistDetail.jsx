@@ -7,7 +7,7 @@ export default function ArtistDetail(){
 
  
     
-        // let navigate = useNavigate()
+        let navigate = useNavigate()
     
         let { id } = useParams();
         const [artist, setArtist] = useState('')
@@ -34,6 +34,9 @@ export default function ArtistDetail(){
             getEvents()
         },[id]);
     
+        const handleEventClick = eventId => {
+            navigate(`/events/${eventId}`);
+          };
     
         return(
             <div>
@@ -46,7 +49,7 @@ export default function ArtistDetail(){
                     <img src={artist.image_url} />
                     <h2>Upcoming Shows: </h2>
                     {events.map((event) => (
-                        <div key={event.id}>
+                         <div key={event.id} onClick={() => handleEventClick(event.id)}>
                             <h5>{event.name}</h5>
                             <p>{event.date}</p>
                             <img src={event.image_url}/>
