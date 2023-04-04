@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Nav from './Nav'
+import {MdDateRange} from 'react-icons/md'
+import {BiTimeFive} from 'react-icons/bi'
 
 
 
@@ -21,9 +23,12 @@ export default function Events(){
         navigate(`${index}`)
       }
 
+    const goBack = () => navigate(-1);
+    
     return(
         <div>
             <Nav/>
+            <div className = "nav-btn-pages"><button className="nav-btn-pages" onClick={goBack}>Back</button></div>
             <div className= 'card-container'>
                 {events.map((event)=>(
                     <div onClick={() => showDetail(event.id)} key={event.id}className="mapped-card-display">
@@ -31,8 +36,10 @@ export default function Events(){
                         <div className="img-wrapper">
                             <img src = {event.image_url}/>
                         </div>
-                        <h5>Date: {event.date}</h5>
-                        <h5>Time: {event.start_time}</h5>
+                        <div className="info-bottom">
+                        <h5><MdDateRange/> Date: {event.date}</h5>
+                        <h5><BiTimeFive/> Time: {event.start_time}</h5>
+                        </div>
                     </div>
                 ))}
             </div>

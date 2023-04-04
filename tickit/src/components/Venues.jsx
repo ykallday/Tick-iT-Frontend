@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import axios from 'axios'
 import Nav from './Nav'
 import { useNavigate } from 'react-router-dom'
+import {MdLocationOn} from 'react-icons/md'
 
 
 export default function Venues(){
@@ -18,10 +19,12 @@ export default function Venues(){
     const showDetail = (index)=>{
         navigate(`${index}`)
       }
-
+    const goBack = () => navigate(-1);
+    
     return(
         <div>
             <Nav/>
+            <div className = "nav-btn-pages"><button className="nav-btn-pages" onClick={goBack}>Back</button></div>
             <div className= 'card-container'>
                 {venues.map((venue)=>(
                     <div onClick={() => showDetail(venue.id)} key={venue.id}className="mapped-card-display">
@@ -29,6 +32,7 @@ export default function Venues(){
                         <div className="img-wrapper">
                             <img src = {venue.image_url}/>
                         </div>
+                        <h4><MdLocationOn/>{venue.address}</h4>
                     </div>
                 ))}
             </div>

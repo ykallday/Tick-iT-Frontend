@@ -4,8 +4,10 @@ export default function Confirmation(){
     return(
         <div>
             <Nav/>
-            <h4>Congrats! Your purchase is confirmed. Enjoy the show! </h4>
+            <h2 id = "confirm">Congrats! Your purchase is confirmed. Enjoy the show! </h2>
+            <div className="nav-btn-pages">
             <Link to="/events"><button>Browse More Events</button></Link>
+            </div>
         </div>
     )
 }

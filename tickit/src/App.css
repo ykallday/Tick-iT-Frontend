@@ -1,37 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap');
 
  /*Main Styles*/
- *{
-    margin: 0;
-    padding-left: 0;
-   
-    
-    
- }
 
-
-
-
- /**/
  html, body {
    max-width: 100%;
    overflow-x: hidden;
    padding-left: 6rem;
+
 }
 
  *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Mochiy Pop One', sans-serif;
+	font-family: 'Inter', sans-serif;
+   font-weight:400;
 }
 .body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
+   max-height:100%;
 	background: #252839;
-   color:white;
+   color:cornsilk;
 }
 .ul{
 	position: relative;
@@ -157,7 +149,7 @@ ul li:nth-child(7){
 .hero-text{
 font-size: 60px;
 width: 800px;
-color: white;
+color: cornsilk;
 }
 
 h3{
@@ -179,7 +171,7 @@ h3{
     position: fixed;
     top: 0px;
     left:0px;
-    color:white;
+    color:cornsilk;
     padding-top:30px;
     padding-left:5px;
     padding-right:5px;
@@ -195,7 +187,7 @@ h3{
    border-top: 2px  solid #464747;
    width:200px;
    height: 40px;
-   color:white;
+   color:cornsilk;
 }
 .hero-links-end{
    display: flex;
@@ -203,7 +195,7 @@ h3{
    border-top: 2px  solid #464747;
    width:200px;
    height: 40px;
-   color:white;
+   color:cornsilk;
    border-bottom: 2px solid #464747;
 }
 .inner-link{   
@@ -215,6 +207,7 @@ h3{
 .home{
    display: flex;
 }
+
 .hero-img{
 border-radius: 10px;
 
@@ -227,7 +220,7 @@ btn{
    background-color: black;
    height: 30px;
    width: 90px;
-   color:white;
+   color:cornsilk;
    font-weight: 500;
    border-radius: 100px;
    padding: 10px 15px;
@@ -242,9 +235,10 @@ background-color: rgb(83, 139, 0);
    display: flex;
    flex-direction: column;
    grid-gap: 10px;
-
  }
-
+.hero-container h4{
+   color: cornsilk;
+}
 .upcoming-events-container{
    background-color: rgba(0, 0, 0, 0);
    position:relative;
@@ -276,23 +270,11 @@ font-size: 40px;
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 100%;
+   height: 100%; 
    transition: .8s;
-   /* background: url('https://media.gettyimages.com/id/978980792/photo/alex-turner-of-arctic-monkeys-performs-at-coca-cola-roxy-on-june-19-2018-in-atlanta-georgia.jpg?s=612x612&w=0&k=20&c=XepG2gHNuLqlzeezkocFiYC7x_DR1TWKoGnpG0dojLw=') center center no-repeat;
-   background-size: 350px; */
-
 
 }
 
-/* .events-box:hover{
-   background: url('https://media.gettyimages.com/id/978980792/photo/alex-turner-of-arctic-monkeys-performs-at-coca-cola-roxy-on-june-19-2018-in-atlanta-georgia.jpg?s=612x612&w=0&k=20&c=XepG2gHNuLqlzeezkocFiYC7x_DR1TWKoGnpG0dojLw=') center center no-repeat;
-   background-size: 400px;
-
-   filter:blur(.5px);
-   filter: brightness(80%);
-
-
-} */
 
 .upcoming-events-list{
    position:absolute;
@@ -381,7 +363,7 @@ font-size: 40px;
     border-radius:20px;
     border: 1px solid transparent;
     background-color:black;
-    color:white;
+    color:cornsilk;
  }
 
  button:hover{
@@ -408,7 +390,7 @@ main{
  /***Components***/
  /****NAV BAR*****/
  .App-header{
-    background-color:white;
+    background-color:cornsilk;
     display:inline-block;
     width:100%;
     height:15%;
@@ -432,21 +414,21 @@ main{
  }
  /***SEARCH BAR***/
  .search-bar input{
-    background-color:black;
-    border: 1px solid white;
+    background-color:white;
+    border: 2px solid black;
     /* width:30%;
     height:30px; */
     border-radius:20px;
     margin-left:5px;
     margin-top:5px;
-    color:white;
+    color:black;
     padding:5px;
  }
 
  .search-bar select{
-   background-color:black;
-   border: 2px solid white;
-   color:white;
+   background-color:white;
+   border: 2px solid black;
+   color:black;
    border-radius:20px;
    margin-left:5px;
    padding:2px;
@@ -462,24 +444,26 @@ main{
 }
 
 .img-wrapper{
-    width: 100%;
-    min-height:240px;
+    max-width: 100%;
+    height:240px;
    
 }
 .img-wrapper img{
-    height:auto;
     width:100%;
+    object-fit: cover;
+    height: 240px;
     border-radius:20px;
-    margin-top:5px;
+    
     border: 2px solid lightgray;
+    
 }
  .mapped-card-display{
-    background-color:white;
+    background-color:cornsilk;
     margin:15px;
     padding:15px;
-    min-height:200px;
+    max-height:fit-content;
     min-width:150px;
-    max-height: fit-content;
+    min-height:350px;
     border-radius:20px;
     box-shadow: 2px 2px 2px darkgray;
  }
@@ -488,9 +472,13 @@ main{
     scale: calc(1.1);
  }
 
- .mapped-card-display h2{
-   color:black;
- }
+.card-container .info-bottom{
+   height:fit-content;
+   display:flex;
+   flex-direction:column;
+   margin-bottom:0px;
+   margin-top:30px;
+}
  /**pages**/
  .page-title{
     text-align:center;
@@ -499,7 +487,7 @@ main{
  }
 
 #event-detail{
-   color:white;
+   color:cornsilk;
 }
 
 .img-details{
@@ -510,21 +498,29 @@ main{
    margin-bottom:20px;
 }
 #event-detail h3{
-   color:white;
+   color:cornsilk;
 }
 #event-detail button{
-   background-color:white;
+   background-color:cornsilk;
    color:black;
 }
+#venue-info h4 a, #event-detail a, #artist-detail a{
+   text-decoration:none;
+   color:aqua;
+}
+#venue-info h4, #event-detail h4, #artist-detail h4{
+   margin-bottom:6px;
+}
+
 #tickets{
-   color:white;
+   color:cornsilk;
 }
 
 #tickets h3{
-   color:white;
+   color:cornsilk;
 }
 #artist-detail{
-   color:white;
+   color:cornsilk;
 }
 
 
@@ -532,8 +528,87 @@ main{
    display: block;
  }
  
- #venue-info h4 {
-   display: inline-block;
-   margin-right: 10px;
+
+.main-image{
+   width:40%;
+   border-radius:20px;
+}
+
+.upcoming-shows-card{
+   display: flex;
+   text-align:center;
+   overflow-x: scroll;
+
  }
 
+ .upcoming-shows-card img{
+   width:200px;
+   height:auto;
+   border-radius: 20px;
+   padding-top: 10px;
+ }
+
+ .card-wrap{
+   padding-top: 14px;
+   background-color: rgb(252, 242, 224);
+   color: black;
+   width: 240px;
+   height: fit-content;
+   border-radius:20px;
+   margin: 20px;
+ }
+
+form{
+ margin-top:10px;
+ padding:5px;
+ background-color:cornsilk;
+ border-radius:10px;
+ width: fit-content;
+
+}
+ form input{
+   border-radius:20px;
+   padding:5px;
+   margin-left: -2px;
+   margin-top:4px;
+   margin-bottom:10px;
+
+ }
+
+ form select{
+   border-radius:30px;
+   height:30px;
+   border:2px solid black;
+   color:black;
+   width:100px;
+   height:
+ }
+ .buyTix{
+   width:500px;
+   text-align:center;
+   color:black;
+
+ }
+ .buyTix label{
+   color:black;
+   font-size:10px;
+ }
+
+ #confirm{
+   margin-top:30px;
+   text-align:center;
+   color:cornsilk;
+
+ }
+.nav-btn-pages{
+   margin: 0 auto;
+ }
+ .nav-btn-pages button{
+   background-color:cornsilk;
+   color:black;
+   margin-bottom:10px;
+ }
+ .confirm .nav-btn-pages button{
+   margin-top: 30px;
+   text-align:center;
+ }
