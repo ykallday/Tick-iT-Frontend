@@ -1,6 +1,7 @@
 import {useParams,useNavigate} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+
 import Nav from './Nav'
 export default function Tickets(){
 
@@ -8,7 +9,6 @@ export default function Tickets(){
     let { id } = useParams();
     let navigate = useNavigate()
     const [formValues, setFormValues] = useState({
-        show: "",
         name: "",
         quantity:"",
         credit:"",
@@ -29,18 +29,19 @@ export default function Tickets(){
 
     const handleSubmit = async (e) => {
             e.preventDefault();
-            const tick = await axios.post('http://localhost:8000/ticket', {
-                show: formValues.show,
+            const tick = {
+                show: event.name,
                 name: formValues.name,
                 quantity: formValues.quantity,
                 credit:formValues.credit,
                 zipcode:formValues.zipcode,
                 exp:formValues.exp,
                 ccv:formValues.ccv,
-                address:formValues.address,
-                })
+                address:formValues.address
+                };
+                console.log(tick)
+            await axios.post('http://localhost:8000/ticket/', tick);
             setFormValues({
-                show: "",
                 name: "",
                 quantity:"",
                 credit:"",
@@ -64,10 +65,6 @@ export default function Tickets(){
                 <h4>Date: {event.date}</h4>
                 <h4>Time: {event.start_time} - {event.end_time}</h4>
                 <h4>Ticket price: ${event.ticket_price} each</h4>
-                <div className="show">
-                <h3><label htmlFor="show">Show:</label></h3>
-                <input value={event.name} name="show" type="text" placeholder={event.name}/>
-                </div>
                 <div className="name">
                 <h3><label htmlFor="name">your name:</label></h3>
                 <input onChange={handleChange} value={formValues.name} name="name" type="text" placeholder="" required/>
