@@ -64,6 +64,21 @@ export default function Tickets(){
                 <h4>Date: {event.date}</h4>
                 <h4>Time: {event.start_time} - {event.end_time}</h4>
                 <h4>Ticket price: ${event.ticket_price} each</h4>
+                <select id="quantity" name="quantity" onChange={handleChange} required>
+                            <option id="quantity" value="0">Select:</option>
+                            <option id="quantity" value="1">1</option>
+                            <option id="quantity" value="2">2</option>
+                            <option id="quantity" value="3">3</option>
+                            <option id="quantity" value="4">4</option>
+                            <option id="quantity" value="5">5</option>
+                            <option id="quantity" value="6">6</option>
+                            <option id="quantity" value="7">7</option>
+                            <option id="quantity" value="8">8</option>
+                        </select>
+
+                        
+              
+
                 <div className="show">
                 <h3><label htmlFor="show">Show:</label></h3>
                 <input value={event.name} name="show" type="text" placeholder={event.name}/>
@@ -74,17 +89,7 @@ export default function Tickets(){
                 </div>
                 <div className="quantity">
                 <h3><label htmlFor="quantity">How Many?</label></h3>
-                <select id="quantity" name="quantity" onChange={handleChange} required>
-                <option id="quantity" value="0">Select:</option>
-                    <option id="quantity" value="1">1</option>
-                    <option id="quantity" value="2">2</option>
-                    <option id="quantity" value="3">3</option>
-                    <option id="quantity" value="4">4</option>
-                    <option id="quantity" value="5">5</option>
-                    <option id="quantity" value="6">6</option>
-                    <option id="quantity" value="7">7</option>
-                    <option id="quantity" value="8">8</option>
-                </select>
+               
                 <div>
                 <h3><label htmlFor="credit">credit card:</label></h3>
                 <input onChange={handleChange} value={formValues.credit} name="credit" type="text" placeholder="" maxLength="19" required/>
