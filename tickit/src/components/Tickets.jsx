@@ -56,10 +56,11 @@ export default function Tickets(){
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value });
       };
-
+    const goBack = () => navigate(-1);
     return(
         <div id="tickets">
             <Nav/>
+            <div className = "nav-btn-pages"><button className="nav-btn-pages" onClick={goBack}>Back</button></div>
             <h1>Buy tickets for {event.name}</h1> 
             <form className = "buyTix" onSubmit = {handleSubmit}>
                 <h4>Date: {event.date}</h4>

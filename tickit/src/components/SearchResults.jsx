@@ -14,7 +14,7 @@ export default function SearchResults(){
     let input = search.query;
     console.log(input)
     let category = search.category;
-
+    const goBack = () => navigate(-1);
     const showDetail = (index) =>(
         navigate(`${category}Detail/${index}`)
     )
@@ -36,6 +36,7 @@ export default function SearchResults(){
     return(
         <div>
         <Nav/>
+        <div className = "nav-btn-pages"><button className="nav-btn-pages" onClick={goBack}>Back</button></div>
         <div className= 'card-container'>
         {filtered.map((item)=>(
             

@@ -21,10 +21,12 @@ export default function Artists(){
         navigate(`${index}`)
       }
 
+    const goBack = () => navigate(-1);
 
     return(
         <div>
             <Nav/>
+            <div className = "nav-btn-pages"><button className="nav-btn-pages" onClick={goBack}>Back</button></div>
             <div className= 'card-container'>
                 {artists.map((artist)=>(
                     <div onClick={() => showDetail(artist.id)} key={artist.id}className="mapped-card-display">
