@@ -3,7 +3,12 @@ import {useContext, useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import {CgSearch} from 'react-icons/cg'
+<<<<<<< HEAD
 export default function Search ({setResults}){
+=======
+
+export default function Search (){
+>>>>>>> ded672da324b20b8740c490c0e9f03b1ad0902df
     const {search, setSearch} = useContext(AppContext);
 
     const navigate = useNavigate();

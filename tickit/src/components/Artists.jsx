@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 
+
 export default function Artists(){
     let navigate = useNavigate();
     const [artists, setArtists] = useState([])
