@@ -5,6 +5,7 @@ import Nav from './Nav'
 
 
 
+
 export default function Events(){
     let navigate = useNavigate();
     const [events, setEvents] = useState([])

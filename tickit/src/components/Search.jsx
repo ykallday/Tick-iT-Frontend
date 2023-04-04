@@ -2,6 +2,7 @@ import {useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import { AppContext } from '../Context/AppContext';
 import {CgSearch} from 'react-icons/cg'
+
 export default function Search (){
     const {search, setSearch} = useContext(AppContext);
 
