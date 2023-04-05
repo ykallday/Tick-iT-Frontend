@@ -413,11 +413,14 @@ main{
     padding-left:20px;
  }
  /***SEARCH BAR***/
- .search-bar input{
+#search-bar{
+   width: 85%;
+}
+
+ #search-bar input{
     background-color:white;
     border: 2px solid black;
-    /* width:30%;
-    height:30px; */
+    width:95%;
     border-radius:20px;
     margin-left:5px;
     margin-top:5px;
@@ -425,14 +428,20 @@ main{
     padding:5px;
  }
 
- .search-bar select{
+ #search-bar select{
    background-color:white;
    border: 2px solid black;
    color:black;
    border-radius:20px;
    margin-left:5px;
    padding:2px;
- }
+   font-size:80%;
+   width: fit-content;
+ } 
+#search-bar #submit{
+   width:fit-content;
+   padding:4px 10px;
+}
 /****Cards****/
 .card-container{
     display:grid;
@@ -581,7 +590,7 @@ form{
    border:2px solid black;
    color:black;
    width:100px;
-   height:
+
  }
  .buyTix{
    width:500px;
@@ -612,3 +621,4 @@ form{
    margin-top: 30px;
    text-align:center;
  }
+

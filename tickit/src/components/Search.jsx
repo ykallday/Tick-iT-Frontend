@@ -22,7 +22,7 @@ export default function Search (){
     
 
     return(
-        <div className = 'search-bar'>
+        <div id = 'search-bar'>
             <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor = "SearchField"></label>
                 <input type="text" placeholder={CgSearch} id= "query" value = {search.formContent} onChange={handleChange}></input>
@@ -34,7 +34,7 @@ export default function Search (){
                     <option id="category" value="venues">Venue</option>
                 </select>
 
-            <input type = "submit" id="submit" value="Search"></input>
+            <input type = "submit" id="submit" value="Go"></input>
         </form>
         </div>
     )
