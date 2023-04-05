@@ -3,9 +3,10 @@
  /*Main Styles*/
 
  html, body {
-   max-width: 100%;
+   width: 100%;
    overflow-x: hidden;
    padding-left: 6rem;
+   background-color:black;
 
 }
 
@@ -20,9 +21,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
-   max-height:100%;
 	background: #252839;
+   height:100%;
    color:cornsilk;
 }
 .ul{
@@ -383,6 +383,7 @@ font-size: 40px;
 
 main{
     padding:20px;
+
 }
 
 
@@ -590,7 +591,6 @@ form{
    border:2px solid black;
    color:black;
    width:100px;
-
  }
  .buyTix{
    width:500px;
